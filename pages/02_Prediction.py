@@ -4,7 +4,7 @@ import pandas as pd
 import joblib
 import time
 from datetime import datetime
-st.logo(image = 'images/Banque_logo1.jpg')
+st.logo(image = 'images/Banque_logo1.png')
 st.sidebar.image('images/Banque_logo.jpg', caption = "YOUR BUSINESS PARTNER")
 st.markdown("""
 ## 🤖 Prédiction automatique
@@ -175,3 +175,4 @@ if st.button('Lancez la prédiction'):
 
     # Ajouter cette prédiction à la mémoire
     st.session_state.historique.append(prediction_info)
+
