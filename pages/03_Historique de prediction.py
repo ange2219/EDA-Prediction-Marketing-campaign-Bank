@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-st.logo(image = 'images/Banque_logo1.jpg')
+st.logo(image = 'images/Banque_logo1.png')
 st.sidebar.image('images/Banque_logo.jpg', caption = "YOUR BUSINESS PARTNER")
 st.markdown("""
 ## 🗂️ Historique des prédictions
@@ -39,3 +39,4 @@ if "historique" in st.session_state and st.session_state.historique:
 
 else:
     st.info("Aucune prédiction enregistrée pour le moment.")
+
