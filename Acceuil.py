@@ -1,5 +1,5 @@
 import streamlit as st
-st.logo(image = 'images/Banque_logo1.jpg')
+st.logo(image = 'images/Banque_logo1.png')
 st.sidebar.image('images/Banque_logo.jpg', caption = "YOUR BUSINESS PARTNER")
 def main():
     st.markdown("""
@@ -54,4 +54,5 @@ def main():
     """)
 
 if __name__ == '__main__':
+
     main()
