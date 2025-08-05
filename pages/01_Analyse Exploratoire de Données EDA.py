@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt 
 import seaborn as sns
 import plotly.express as px
-st.logo(image = 'images/banque_logo1.jpg')
+st.logo(image = 'images/banque_logo1.png')
 st.sidebar.image('images/banque_logo.jpg', caption = "YOUR BUSINESS PARTNER")
 st.markdown("""
 ## 🔍 Analyse exploratoire (EDA)
@@ -348,3 +348,4 @@ Cette analyse fournit des insights précieux pour améliorer le ciblage des camp
 ---
 
 """)
+
