@@ -1,6 +1,6 @@
 import streamlit as st
-st.logo(image = 'images/Banque_logo1.png')
-st.sidebar.image('images/Banque_logo.jpg', caption = "YOUR BUSINESS PARTNER")
+st.logo(image = 'images/banque_logo1.png')
+st.sidebar.image('images/banque_logo.jpg', caption = "YOUR BUSINESS PARTNER")
 def main():
     st.markdown("""
     ## 👋 Bienvenue dans l'application d'analyse et de prédiction !
@@ -56,3 +56,4 @@ def main():
 if __name__ == '__main__':
 
     main()
+
