@@ -141,7 +141,7 @@ if st.button('Lancez la prédiction'):
         for i in range(int(prob*100) + 1):
             time.sleep(0.01)
             progress_bar.progress(i)
-        st.success("✅ Notre modèle prédit que le client sera **engagé** avec une probabilité de : " + f"{round(prob*100, 2)}%")
+        st.success(f"✅ Notre modèle prédit que le client sera **engagé** avec une probabilité de : {prob * 100:.2f}%")
 
     elif prediction == 1:
         st.subheader("🔋 Taux d'engagement du client")
@@ -149,7 +149,7 @@ if st.button('Lancez la prédiction'):
         for j in range(int(prob*100) + 1):
             time.sleep(0.01)
             progress_bar.progress(j)
-        st.error("❌ Notre modèle prédit que le client **ne sera pas intéressé** avec une probabilité de : " + f"{round(prob*100, 2)}%")
+        st.error(f"❌ Notre modèle prédit que le client **ne sera pas intéressé** avec une probabilité de : {prob * 100:.2f}%")
 
     else:
         st.subheader("🔋 Taux d'engagement du client")
@@ -157,7 +157,7 @@ if st.button('Lancez la prédiction'):
         for k in range(int(prob*100) + 1):
             time.sleep(0.01)
             progress_bar.progress(k)
-        st.warning("🤔 Le client est **potentiellement intéressé**, avec une probabilité de : " + f"{round(prob*100, 2)}%")
+            st.warning(f"🤔 Le client est **potentiellement intéressé**, avec une probabilité de : {prob * 100:.2f}%")
         
 
 
@@ -175,5 +175,6 @@ if st.button('Lancez la prédiction'):
 
     # Ajouter cette prédiction à la mémoire
     st.session_state.historique.append(prediction_info)
+
 
 
