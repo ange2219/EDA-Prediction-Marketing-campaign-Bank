@@ -157,7 +157,7 @@ if st.button('Lancez la prédiction'):
         for k in range(int(prob*100) + 1):
             time.sleep(0.01)
             progress_bar.progress(k)
-            st.warning(f"🤔 Le client est **potentiellement intéressé**, avec une probabilité de : {prob * 100:.2f}%")
+        st.warning(f"🤔 Le client est **potentiellement intéressé**, avec une probabilité de : {prob * 100:.2f}%")
         
 
 
@@ -175,6 +175,7 @@ if st.button('Lancez la prédiction'):
 
     # Ajouter cette prédiction à la mémoire
     st.session_state.historique.append(prediction_info)
+
 
 
 
