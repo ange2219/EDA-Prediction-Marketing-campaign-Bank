@@ -23,5 +23,5 @@ Tu peux tester l’application en ligne ici :
 
 1. Clone le dépôt :
    ```bash
-   git clone <ton-lien-github-ici>
-   cd <nom-du-repo>
+   git clone <https://github.com/ange2219>
+   cd <EDA-Prediction-Marketing-campaign-Bank>
