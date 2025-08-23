@@ -6,7 +6,7 @@ Ce projet vise à prédire, à partir de données clients bancaires, si un clien
 
 L’application est interactive, basée sur **Streamlit**, et propose :
 - un formulaire de saisie client
-- une prédiction ("Engagé", "Potentiel" ou "Non intéressé")
+- une prédiction ("Intéressé", "Potentiel" ou "Non intéressé")
 - une estimation du temps d’appel recommandé
 - des visualisations dynamiques pour positionner le client dans la population globale
 
