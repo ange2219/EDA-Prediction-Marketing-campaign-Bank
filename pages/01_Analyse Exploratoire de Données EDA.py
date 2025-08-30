@@ -87,11 +87,11 @@ if show_hist:
         # Barplot avec plotly.express
         fig = px.bar(counts, x='class', y='count',
                     title="Répartition des classes dans la variable cible",
-                    color='class',  # chaque barre a une couleur différente
-                    color_discrete_map=class_color)  # couleurs personnalisées
+                    color='class', 
+                    color_discrete_map=class_color)  
 
-        # Personnalisation du thème (optionnel)
-        fig.update_layout(template='plotly_dark')  # thème sombre
+    
+        fig.update_layout(template='plotly_dark')  
 
         # Afficher dans Streamlit
         st.plotly_chart(fig)
@@ -108,9 +108,9 @@ if show_hist:
                     title="Durée moyenne par classe",
                     color='class',
                     text='duration',  
-                    color_discrete_map=class_color)  # Personnalisation des couleurs
+                    color_discrete_map=class_color)  
 
-        # Mise en forme (optionnel)
+        
         fig.update_traces(texttemplate='%{text:.2f}', textposition='outside')
         fig.update_layout(template='plotly_dark', yaxis_title="Durée moyenne", xaxis_title="Classe")
 
@@ -128,8 +128,8 @@ if show_hist:
         fig = px.bar(grouped, x='class', y='pdays',
                     title="Nombre d'appel moyenne par classe",
                     color='class',
-                    text='pdays',  # Affiche la valeur au-dessus des barres
-                    color_discrete_map=class_color)  # Personnalisation des couleurs
+                    text='pdays',  
+                    color_discrete_map=class_color)  
 
         fig.update_traces(texttemplate='%{text:.2f}', textposition='outside')
         fig.update_layout(template='plotly_dark', yaxis_title="Nombre d'appel", xaxis_title="Classe")
@@ -148,10 +148,10 @@ if show_hist:
         fig = px.bar(grouped, x='class', y='balance',
                     title="Salaire moyen par classe",
                     color='class',
-                    text='balance',  # Affiche la valeur au-dessus des barres
-                    color_discrete_map=class_color)  # Personnalisation des couleurs
+                    text='balance', 
+                    color_discrete_map=class_color)  
 
-        # Mise en forme (optionnel)
+        
         fig.update_traces(texttemplate='%{text:.2f}', textposition='outside')
         fig.update_layout(template='plotly_dark', yaxis_title="Salaire moyen", xaxis_title="Classe")
 
@@ -168,14 +168,14 @@ if show_hist:
         fig = px.bar(grouped, x='class', y='campaign',
                     title="Nombre de campagne par classe",
                     color='class',
-                    text='campaign',  # Affiche la valeur au-dessus des barres
-                    color_discrete_map=class_color)  # Personnalisation des couleurs
+                    text='campaign',  
+                    color_discrete_map=class_color)  
 
-        # Mise en forme (optionnel)
+        
         fig.update_traces(texttemplate='%{text:.2f}', textposition='outside')
         fig.update_layout(template='plotly_dark', yaxis_title="Nombre de campagne", xaxis_title="Classe")
 
-        # Affichage
+        
         st.plotly_chart(fig)
 
     with col6:  
@@ -188,10 +188,10 @@ if show_hist:
         fig = px.bar(grouped, x='class', y='previous',
                     title="Nombre de jours precedent par classe",
                     color='class',
-                    text='previous',  # Affiche la valeur au-dessus des barres
-                    color_discrete_map=class_color)  # Personnalisation des couleurs
+                    text='previous',  
+                    color_discrete_map=class_color)  
 
-        # Mise en forme (optionnel)
+       
         fig.update_traces(texttemplate='%{text:.2f}', textposition='outside')
         fig.update_layout(template='plotly_dark', yaxis_title="Nombre de jour", xaxis_title="Classe")
 
@@ -204,12 +204,12 @@ if show_cross:
     # Création du tableau croisé
     crosstab = pd.crosstab(df['job'], df['class'], normalize='index') * 100
 
-    # Tri des jobs par fréquence (facultatif mais améliore la lisibilité)
+    
     job_order = df['job'].value_counts().index
     crosstab = crosstab.loc[job_order]
 
     # Affichage de la heatmap
-    fig, ax = plt.subplots(figsize=(12, len(crosstab) * 0.5))  # Taille ajustée
+    fig, ax = plt.subplots(figsize=(12, len(crosstab) * 0.5))  
     sns.heatmap(crosstab, annot=True, fmt=".1f", cmap="Blues", linewidths=.5, ax=ax)
 
     plt.title("Répartition (%) des classes pour chaque job")
@@ -231,16 +231,16 @@ if show_line:
                     title="💼 Solde bancaire moyen par métier",
                     markers=True)
 
-        # Amélioration visuelle
+    
         fig.update_layout(
             xaxis_title="Métier",
             yaxis_title="Solde bancaire moyen (€)",
-            template="plotly_dark",  # tu peux changer selon ton thème
+            template="plotly_dark",  
             height=500,
             width=900
         )
 
-        # Afficher dans Streamlit
+        
         st.plotly_chart(fig, use_container_width=True)
 
     
@@ -348,4 +348,5 @@ Cette analyse fournit des insights précieux pour améliorer le ciblage des camp
 ---
 
 """)
+
 
